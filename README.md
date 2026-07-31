@@ -7,7 +7,7 @@ Link do notebook: https://notebook.google.com/notebook/e0c8174a-2e49-44ae-a5a6-d
 
 Criar um guia para Linux, com comandos e informações básicas, para facilitar o aprendizado e revisão de temas sobre o sistema operacional, além de informações aprofundadas sobre alguns dos sistemas de aquivos em uso atualmente, como btrfs, ext4 e xfs.
 
-
+---
 
   CURADORIA DE FONTES:
 
@@ -16,7 +16,7 @@ Criar um guia para Linux, com comandos e informações básicas, para facilitar 
 3. https://kernel-internals.org/filesystems/xfs/
 4. https://www.ufsexplorer.com/articles/linux-file-systems/
   
-
+---
 
   TESTES DE PROMPT:
 
@@ -86,50 +86,54 @@ Para lidar com a complexidade de múltiplos subvolumes compartilhando dados, o B
 
 Em resumo, enquanto subvolumes organizam o sistema em seções montáveis, os snapshots capturam estados no tempo de forma instantânea e econômica, facilitando a proteção de dados e a administração do sistema.
 
-
+---
 
   MINIGUIA:
 
-Resumos Estruturados do Assunto
+Aqui estão os resumos estruturados, o glossário de termos e os prompts para revisão, elaborados com base no material fornecido.
 
-A. Ecossistema de Distribuições Linux
+### 1. Resumos Estruturados do Assunto
+
+#### A. Ecossistema de Distribuições Linux
 O Linux é um projeto de código aberto que resultou em uma vasta gama de variantes (distribuições), cada uma otimizada para diferentes necessidades.
-Arch Linux: Focada em usuários competentes com atitude "faça você mesmo". Segue o modelo rolling release (atualização contínua) e baseia-se em princípios como simplicidade (sem modificações desnecessárias), modernidade e pragmatismo.
-Ubuntu e Linux Mint: Distribuições populares e amigáveis para iniciantes. O Ubuntu fornece um sistema pré-configurado, enquanto o Mint oferece uma experiência familiar para quem vem do Windows.
-Fedora e RHEL: O Fedora é a base comunitária para o Red Hat Enterprise Linux (RHEL), focando em tecnologias de ponta, enquanto o RHEL foca em estabilidade corporativa.
-Distribuições Especializadas: Incluem Kali Linux (segurança e testes de penetração), Tails (privacidade e anonimato) e NixOS (configuração declarativa).
+*   **Arch Linux:** Focada em usuários competentes com atitude "faça você mesmo". Segue o modelo **rolling release** (atualização contínua) e baseia-se em princípios como simplicidade (sem modificações desnecessárias), modernidade e pragmatismo.
+*   **Ubuntu e Linux Mint:** Distribuições populares e amigáveis para iniciantes. O Ubuntu fornece um sistema pré-configurado, enquanto o Mint oferece uma experiência familiar para quem vem do Windows.
+*   **Fedora e RHEL:** O Fedora é a base comunitária para o **Red Hat Enterprise Linux (RHEL)**, focando em tecnologias de ponta, enquanto o RHEL foca em estabilidade corporativa.
+*   **Distribuições Especializadas:** Incluem **Kali Linux** (segurança e testes de penetração), **Tails** (privacidade e anonimato) e **NixOS** (configuração declarativa).
 
-B. Arquitetura e Performance de Sistemas de Arquivos
+#### B. Arquitetura e Performance de Sistemas de Arquivos
 A escolha do sistema de arquivos (FS) impacta diretamente a escalabilidade e a integridade dos dados.
-Ext4: O padrão para uso geral, conhecido por sua estabilidade e rapidez em verificações (fsck). Utiliza alocação estática de inodes, o que pode causar exaustão se houver bilhões de arquivos pequenos.
-XFS: Otimizado para grandes volumes (até 8 EiB) e alta concorrência. É o único que lida com um bilhão de arquivos sem reconfiguração prévia, sendo o padrão no RHEL 9.
-Btrfs: Um sistema moderno de "árvore de árvores" que utiliza Copy-on-Write (CoW). Oferece snapshots eficientes, subvolumes e auto-recuperação, mas sofre penalidades de performance em escritas aleatórias pesadas, como bancos de dados.
-ZFS: Uma plataforma que combina FS e gerenciador de volumes. Oferece proteção máxima de dados (checksums de ponta a ponta), mas exige alto consumo de memória RAM (algoritmo ARC).
+*   **Ext4:** O padrão para uso geral, conhecido por sua estabilidade e rapidez em verificações (**fsck**). Utiliza alocação estática de **inodes**, o que pode causar exaustão se houver bilhões de arquivos pequenos.
+*   **XFS:** Otimizado para grandes volumes (até 8 EiB) e alta concorrência. É o único que lida com um bilhão de arquivos sem reconfiguração prévia, sendo o padrão no RHEL 9.
+*   **Btrfs:** Um sistema moderno de "árvore de árvores" que utiliza **Copy-on-Write (CoW)**. Oferece snapshots eficientes, subvolumes e auto-recuperação, mas sofre penalidades de performance em escritas aleatórias pesadas, como bancos de dados.
+*   **ZFS:** Uma plataforma que combina FS e gerenciador de volumes. Oferece proteção máxima de dados (checksums de ponta a ponta), mas exige alto consumo de memória RAM (algoritmo **ARC**).
 
-C. Jornada para o Usuário Avançado
+#### C. Jornada para o Usuário Avançado
 Para dominar o Linux, o estudo deve ir além do desktop básico.
-Camadas do Sistema: Entender como os drivers de vídeo e som (PulseAudio, PipeWire) interagem com o hardware.
-Linha de Comando: Perder o medo do terminal e aprender suas linguagens (Bash, Zsh).
-Administração: Gerenciar usuários, grupos, permissões e entender o processo de inicialização via systemd.
-Automação e Redes: Configuração de redes (IP, DNS), firewalls, SSH e criação de scripts (Shell Script) para automatizar tarefas.
+*   **Camadas do Sistema:** Entender como os drivers de vídeo e som (PulseAudio, PipeWire) interagem com o hardware.
+*   **Linha de Comando:** Perder o medo do terminal e aprender suas linguagens (Bash, Zsh).
+*   **Administração:** Gerenciar usuários, grupos, permissões e entender o processo de inicialização via **systemd**.
+*   **Automação e Redes:** Configuração de redes (IP, DNS), firewalls, SSH e criação de scripts (**Shell Script**) para automatizar tarefas.
 
+---
 
-Glossário de Conceitos Principais
+### 2. Glossário de Conceitos Principais
 
-ARC (Adaptive Replacement Cache): Algoritmo de cache do ZFS que gerencia a memória do sistema para otimizar o desempenho de leitura, exigindo planejamento de RAM.
-AUR (Arch User Repository): Repositório mantido pela comunidade para usuários do Arch, contendo scripts de construção (PKGBUILDs) para pacotes não oficiais.
-Copy-on-Write (CoW): Técnica onde, ao modificar um arquivo, o sistema cria uma cópia do bloco de dados antes da alteração, garantindo integridade e permitindo snapshots instantâneos.
-Inode: Estrutura de dados que armazena metadados de um arquivo (tamanho, permissões, localização dos blocos), mas não o seu nome.
-Journaling: Recurso que registra alterações em um log antes de aplicá-las, protegendo o sistema contra corrupção em caso de queda de energia.
-Rolling Release: Modelo de desenvolvimento onde o sistema recebe atualizações contínuas de pacotes, eliminando a necessidade de reinstalações periódicas de grandes versões.
-Snapshots: Cópias de "ponto no tempo" de um subvolume que inicialmente não ocupam espaço adicional graças ao CoW.
-Subvolumes: Divisões internas em um sistema Btrfs que agem como sistemas de arquivos independentes e montáveis, mas compartilham o mesmo pool de armazenamento.
+*   **ARC (Adaptive Replacement Cache):** Algoritmo de cache do ZFS que gerencia a memória do sistema para otimizar o desempenho de leitura, exigindo planejamento de RAM.
+*   **AUR (Arch User Repository):** Repositório mantido pela comunidade para usuários do Arch, contendo scripts de construção (PKGBUILDs) para pacotes não oficiais.
+*   **Copy-on-Write (CoW):** Técnica onde, ao modificar um arquivo, o sistema cria uma cópia do bloco de dados antes da alteração, garantindo integridade e permitindo snapshots instantâneos.
+*   **Inode:** Estrutura de dados que armazena metadados de um arquivo (tamanho, permissões, localização dos blocos), mas não o seu nome.
+*   **Journaling:** Recurso que registra alterações em um log antes de aplicá-las, protegendo o sistema contra corrupção em caso de queda de energia.
+*   **Rolling Release:** Modelo de desenvolvimento onde o sistema recebe atualizações contínuas de pacotes, eliminando a necessidade de reinstalações periódicas de grandes versões.
+*   **Snapshots:** Cópias de "ponto no tempo" de um subvolume que inicialmente não ocupam espaço adicional graças ao CoW.
+*   **Subvolumes:** Divisões internas em um sistema Btrfs que agem como sistemas de arquivos independentes e montáveis, mas compartilham o mesmo pool de armazenamento.
 
+---
 
-Conjunto de Prompts Reutilizáveis para Revisão
+### 3. Conjunto de Prompts Reutilizáveis para Revisão
 
-Prompt sobre Sistemas de Arquivos: "Compare as vantagens e desvantagens do uso de Btrfs e ZFS em um ambiente de servidor doméstico, focando em snapshots, requisitos de RAM e estabilidade de arranjos RAID 5/6."
-Prompt sobre Distribuições: "Explique como os princípios de 'Simplicidade' e 'Pragmatismo' do Arch Linux diferenciam sua experiência de uso em comparação com distribuições 'User-friendly' como o Ubuntu."
-Prompt sobre Gestão de Dados: "Descreva o problema da 'exaustão de inodes' no sistema ext4 e explique por que arquiteturas como XFS e Btrfs não sofrem dessa falha."
-Prompt sobre Administração de Sistema: "Quais são as etapas recomendadas para um usuário de desktop migrar para um nível avançado no Linux, e quais ferramentas de automação e monitoramento ele deve priorizar?"
-Prompt sobre Performance: "Com base nos benchmarks de 2024 e 2026, qual sistema de arquivos apresenta o melhor desempenho para um banco de dados SQLite e qual é o motivo técnico por trás da lentidão do Btrfs nesse cenário?"
+*   **Prompt sobre Sistemas de Arquivos:** "Compare as vantagens e desvantagens do uso de Btrfs e ZFS em um ambiente de servidor doméstico, focando em snapshots, requisitos de RAM e estabilidade de arranjos RAID 5/6."
+*   **Prompt sobre Distribuições:** "Explique como os princípios de 'Simplicidade' e 'Pragmatismo' do Arch Linux diferenciam sua experiência de uso em comparação com distribuições 'User-friendly' como o Ubuntu."
+*   **Prompt sobre Gestão de Dados:** "Descreva o problema da 'exaustão de inodes' no sistema ext4 e explique por que arquiteturas como XFS e Btrfs não sofrem dessa falha."
+*   **Prompt sobre Administração de Sistema:** "Quais são as etapas recomendadas para um usuário de desktop migrar para um nível avançado no Linux, e quais ferramentas de automação e monitoramento ele deve priorizar?"
+*   **Prompt sobre Performance:** "Com base nos benchmarks de 2024 e 2026, qual sistema de arquivos apresenta o melhor desempenho para um banco de dados SQLite e qual é o motivo técnico por trás da lentidão do Btrfs nesse cenário?"
