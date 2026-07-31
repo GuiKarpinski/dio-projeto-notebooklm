@@ -11,10 +11,10 @@ Criar um guia para Linux, com comandos e informações básicas, para facilitar 
 
   CURADORIA DE FONTES:
 
-https://www.cbtnuggets.com/blog/technology/system-admin/linux-file-systems-ext4-vs-btrfs-vs-zfs
-https://surajsinghbisht054.medium.com/understand-btrfs-file-system-copy-on-write-sub-volumes-snapshots-quota-group-part-1-c6305f87df9b
-https://kernel-internals.org/filesystems/xfs/
-https://www.ufsexplorer.com/articles/linux-file-systems/
+1. https://www.cbtnuggets.com/blog/technology/system-admin/linux-file-systems-ext4-vs-btrfs-vs-zfs
+2. https://surajsinghbisht054.medium.com/understand-btrfs-file-system-copy-on-write-sub-volumes-snapshots-quota-group-part-1-c6305f87df9b
+3. https://kernel-internals.org/filesystems/xfs/
+4. https://www.ufsexplorer.com/articles/linux-file-systems/
   
 
 
