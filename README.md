@@ -21,8 +21,8 @@ Criar um guia para Linux, com comandos e informações básicas, para facilitar 
   TESTES DE PROMPT:
 
 P: Explique as diferenças entre os sistemas de arquivos Ext4, XFS e Btrfs.
-R:  
-As diferenças entre os sistemas de arquivos **Ext4**, **XFS** e **Btrfs** residem em suas arquiteturas fundamentais, escalabilidade e nos recursos avançados que oferecem para diferentes tipos de carga de trabalho.
+
+R: As diferenças entre os sistemas de arquivos **Ext4**, **XFS** e **Btrfs** residem em suas arquiteturas fundamentais, escalabilidade e nos recursos avançados que oferecem para diferentes tipos de carga de trabalho.
   
   ### 1. Arquitetura e Filosofia de Design
   *   **Ext4 (Fourth Extended Filesystem):** É um sistema de arquivos **baseado em journaling (diário)** e o padrão para muitas distribuições Linux, como Ubuntu e Debian. Ele organiza o disco em **Block Groups** estáticos e usa **inodes** para rastrear arquivos. Sua filosofia foca em **estabilidade e maturidade** para uso geral.
@@ -45,8 +45,8 @@ As diferenças entre os sistemas de arquivos **Ext4**, **XFS** e **Btrfs** resid
 
 
 P: Explique de forma resumida as vantagens de algumas das principais distros
-R: 
-As distribuições Linux formam um ecossistema diversificado, onde cada uma oferece vantagens específicas dependendo do perfil do usuário e do objetivo de uso. Abaixo, apresento um resumo das qualidades das principais distros:
+
+R: As distribuições Linux formam um ecossistema diversificado, onde cada uma oferece vantagens específicas dependendo do perfil do usuário e do objetivo de uso. Abaixo, apresento um resumo das qualidades das principais distros:
 
 *   **Ubuntu:** É uma das mais populares do mundo, sendo amplamente recomendada por ser **amigável para iniciantes** e já vir com softwares essenciais pré-instalados. Além de sua grande comunidade de suporte, é um **padrão de mercado para servidores e nuvem**, o que o torna ideal para quem busca qualificação profissional.
 *   **Debian:** Destaca-se por sua **extrema estabilidade e confiabilidade**, sendo a base para muitas outras distros, como o próprio Ubuntu. Possui um dos **maiores repositórios de pacotes** disponíveis, garantindo que quase qualquer software possa ser encontrado em suas fontes oficiais.
@@ -61,8 +61,8 @@ Para usuários que buscam objetivos específicos, existem opções como o **Kali
 
 
 P: Como funcionam os snapshots e subvolumes no Btrfs?
-R:
-No sistema de arquivos Btrfs, **subvolumes** e **snapshots** são recursos centrais que permitem gerenciar dados de forma flexível e eficiente em termos de espaço, utilizando a arquitetura de **Copy-on-Write (CoW)**.
+
+R: No sistema de arquivos Btrfs, **subvolumes** e **snapshots** são recursos centrais que permitem gerenciar dados de forma flexível e eficiente em termos de espaço, utilizando a arquitetura de **Copy-on-Write (CoW)**.
 
 ### 1. O que são Subvolumes?
 Um subvolume pode ser visualizado como uma seção independente ou um "mini sistema de arquivos" dentro do volume principal do Btrfs. 
