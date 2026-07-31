@@ -4,11 +4,13 @@ Projeto de NotebookLM para bootcamp da DIO
 Link do notebook: https://notebook.google.com/notebook/e0c8174a-2e49-44ae-a5a6-de07a0dafcda
 
   CONTEXTO E OBJETIVOS:
+
 Criar um guia para Linux, com comandos e informações básicas, para facilitar o aprendizado e revisão de temas sobre o sistema operacional, além de informações aprofundadas sobre alguns dos sistemas de aquivos em uso atualmente, como btrfs, ext4 e xfs.
 
 
 
   CURADORIA DE FONTES:
+
 https://www.cbtnuggets.com/blog/technology/system-admin/linux-file-systems-ext4-vs-btrfs-vs-zfs
 https://surajsinghbisht054.medium.com/understand-btrfs-file-system-copy-on-write-sub-volumes-snapshots-quota-group-part-1-c6305f87df9b
 https://kernel-internals.org/filesystems/xfs/
@@ -16,7 +18,8 @@ https://www.ufsexplorer.com/articles/linux-file-systems/
   
 
 
-  TESTES DE PROMPT
+  TESTES DE PROMPT:
+
 P: Explique as diferenças entre os sistemas de arquivos Ext4, XFS e Btrfs.
 R:  
 As diferenças entre os sistemas de arquivos **Ext4**, **XFS** e **Btrfs** residem em suas arquiteturas fundamentais, escalabilidade e nos recursos avançados que oferecem para diferentes tipos de carga de trabalho.
@@ -85,7 +88,8 @@ Em resumo, enquanto subvolumes organizam o sistema em seções montáveis, os sn
 
 
 
-  MINIGUIA
+  MINIGUIA:
+
 Resumos Estruturados do Assunto
 
 A. Ecossistema de Distribuições Linux
